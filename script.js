@@ -18,7 +18,7 @@ if(localStorage.getItem("Income")==null)
         }
         if(localStorage.getItem("Income")!=null && localStorage.getItem("Expense")!=null)
         {
-            let balance = parseInt(localStorage.getItem("Income"))+parseInt(localStorage.getItem("Expense"));
+            let balance = parseInt(localStorage.getItem("Income"))-parseInt(localStorage.getItem("Expense"));
             document.getElementById("balance").innerHTML="$"+balance; 
         }
         else{
