@@ -23,13 +23,17 @@ if(localStorage.getItem("Income")==null)
         }
         else{
             let balance=0;
-            if(localStorage.getItem("Income")==null)
+            if(localStorage.getItem("Income")==null && localStorage.getItem("Expense")!=null)
            { balance=parseInt(localStorage.getItem("Expense"));
            document.getElementById("balance").innerHTML="-$"+balance; 
         }
-            else
+            else if(localStorage.getItem("Expense")==null && localStorage.getItem("Income")!=null)
            { balance=parseInt(localStorage.getItem("Income"));
 
+            document.getElementById("balance").innerHTML="$"+balance; 
+        }
+        else
+        {
             document.getElementById("balance").innerHTML="$"+balance; 
         }
         }
